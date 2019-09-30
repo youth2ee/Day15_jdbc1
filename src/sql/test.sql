@@ -6,6 +6,7 @@ select avg(sal) from emp;
 select deptno,avg(sal) from emp group by deptno;
 
 select max(hiredate) from emp;
+-- sql에서는 주석을 '--'으로 쓴다.
 select min(sal) from emp
 
 select comm from emp
