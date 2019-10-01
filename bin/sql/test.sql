@@ -58,5 +58,8 @@ select * from DEPT
 select * from dept
 where deptno=10
 
+select * from emp
+order by hiredate desc
+
 
 

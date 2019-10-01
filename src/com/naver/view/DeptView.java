@@ -18,7 +18,6 @@ public class DeptView {
 		System.out.println(dd.getDname());
 		System.out.println(dd.getLoc());
 
-
 	}
 
 }
