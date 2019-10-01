@@ -10,36 +10,46 @@ import java.util.ArrayList;
 import com.naver.util.DBConnector;
 import com.naver.view.DeptView;
 
-public class TestDAO3 {
+public class TestDAO3 { //data access object : 데이터베이스에 연결하여 추가,삭제함
 
-	public ResultSet deptSelectOne(int deptno) throws Exception {
+	public DeptDTO deptSelectOne(int deptno) {
+		Connection con=null;
+		PreparedStatement st=null;
+		ResultSet rs =null;
+		DeptDTO dd = null;
 		
-		Connection con = DBConnector.getConnect();
-		String sql = "select * from dept where deptno=?";
-		PreparedStatement st = con.prepareStatement(sql);
-		
-		st.setInt(1, deptno);
-		
-		ResultSet rs = st.executeQuery();
-		//resultSet은 close시키면 끝나므로 리턴할 수 없다.
-		
-		ArrayList<E>
-		
-		if(rs.next()) {
-			int deptno = rs.getInt(1);
-			String dname = rs.getString(2);
-			String loc = rs.getString(3);
+		try {
+			con = DBConnector.getConnect();
+			String sql = "select * from dept where deptno=?";
+			st = con.prepareStatement(sql);
 			
-			System.out.println(deptno);
-			System.out.println(dname);
-			System.out.println(loc);
+			st.setInt(1, deptno);
 			
+			rs = st.executeQuery();
+			//resultSet은 close시키면 끝나므로 리턴할 수 없다.
+			
+			if(rs.next()) {
+				dd = new DeptDTO();
+				dd.setDeptno(rs.getInt(1));
+				dd.setDname(rs.getString(2));
+				dd.setLoc(rs.getString(3));
+			} 
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		
-		
-		
-		return rs;
-		
+
+		return dd;
+
 	}//deptSelectOne 메서드 끝
 
 

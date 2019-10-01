@@ -2,22 +2,25 @@ package com.naver.view;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.naver.t1.DeptDTO;
 
 public class DeptView {
 	
-	public void view(ResultSet rs) throws Exception{
-		
-		if(rs.next()) {
-			int deptno = rs.getInt(1);
-			String dname = rs.getString(2);
-			String loc = rs.getString(3);
-			
-			System.out.println(deptno);
-			System.out.println(dname);
-			System.out.println(loc);
-			
-		}
+	public void view(String str) {
+		System.out.println(str);
 		
 	}
 
+	public void view(DeptDTO dd){
+		System.out.println(dd.getDeptno());
+		System.out.println(dd.getDname());
+		System.out.println(dd.getLoc());
+
+
+	}
+
 }
+
+
