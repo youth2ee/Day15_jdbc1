@@ -43,6 +43,7 @@ public class TestMain {
 		DeptView dv = new DeptView();
 
 		DeptDTO dd = td3.deptSelectOne(deptno);
+		//받은 부서값에 따른 값이 없으면 리턴받는 값이 null. 따라서 null인 경우는 없는 부서
 		if(dd != null) {
 			dv.view(dd);
 		} else {

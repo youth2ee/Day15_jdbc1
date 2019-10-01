@@ -8,7 +8,7 @@ public class DBConnector {
 	
 	public static Connection getConnect() throws Exception {
 		//static은 객체생성 안한다.
-		//클래스명.메서드명
+		//클래스명.메서드명 -> DBConnector.getConnect();를 Connection타입으로 받아서 바로 사용가능.
 		
 		String user = "scott";
 		String password = "tiger";

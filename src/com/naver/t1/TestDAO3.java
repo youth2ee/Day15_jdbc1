@@ -28,7 +28,7 @@ public class TestDAO3 { //data access object : 데이터베이스에 연결하�
 			rs = st.executeQuery();
 			//resultSet은 close시키면 끝나므로 리턴할 수 없다.
 			
-			if(rs.next()) {
+			if(rs.next()) { //여기서는 dept테이블에서 지정된 deptno에 따른 한줄(횡)만 받으면 되므로 반복문 필요없다.
 				dd = new DeptDTO();
 				dd.setDeptno(rs.getInt(1));
 				dd.setDname(rs.getString(2));
