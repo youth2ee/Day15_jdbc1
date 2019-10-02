@@ -46,6 +46,18 @@ values(90, 'TEST2')
 insert into DEPT (deptno,dname,loc)
 values(99,'S1','INCHEON')
 
+insert into BONUS 
+values('YOUNG','COM',3000,100)
+
+insert into BONUS
+values('KANG','PD',5000,200)
+
+insert into BONUS
+values('KATE','MODEL',4500,30)
+
+select * from BONUS
+select * from SALGRADE
+
 select * from dept
 order by deptno asc
 
@@ -105,7 +117,7 @@ where empno=7902
 update EMP set ename='MILLER',job='CLERK'
 where empno=7934
 
-
+select * from bonus where ename='YOUNG'
 
 
 
