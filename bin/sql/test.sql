@@ -44,7 +44,7 @@ insert into DEPT (deptno, dname)
 values(90, 'TEST2')
 
 insert into DEPT (deptno,dname,loc)
-values(100,'S1','INCHEON')
+values(99,'S1','INCHEON')
 
 select * from dept
 order by deptno asc
@@ -60,6 +60,52 @@ where deptno=10
 
 select * from emp
 order by hiredate desc
+
+delete emp
+where empno=7000
+
+select * from emp
+
+update EMP set ename='YOUNG',job='JOB'
+where empno=7777
+
+update EMP set ename='SMITH', JOB='CLERK'
+WHERE empno=7369
+
+update EMP set ename='ALLEN',job='SALESMAN'
+where empno=7499
+
+update EMP set ename='WARD',job='SALESMAN'
+where empno=7521
+
+update EMP set ename='JONES',job='MANAGER'
+where empno=7566
+
+update EMP set ename='MARTIN',job='SALESMAN'
+where empno=7654
+
+update EMP set ename='BLAKE',job='MANAGER'
+where empno=7698
+
+update EMP set ename='CLARK',job='MANAGER'
+where empno=7782
+
+update EMP set ename='KING',job='PRESIDENT'
+where empno=7839
+
+update EMP set ename='TURNER',job='SALESMAN'
+where empno=7844
+
+update EMP set ename='JAMES',job='CLERK'
+where empno=7900
+
+update EMP set ename='FORD',job='ANALYST'
+where empno=7902
+
+update EMP set ename='MILLER',job='CLERK'
+where empno=7934
+
+
 
 
 
