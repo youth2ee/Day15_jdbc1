@@ -1,6 +1,9 @@
 select * from EMP;
 select * from DEPT;
-select * from SALGRADE;
+select * from Bonus;
+
+select * from EMP
+where ename like '%S%'
 
 select avg(sal) from emp;
 select deptno,avg(sal) from emp group by deptno;
