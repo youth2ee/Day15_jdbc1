@@ -50,7 +50,7 @@ public class TestDAO {
 				System.out.println(sal);
 				System.out.println(job);
 				
-			} else { //한줄 읽어서 데이터가 없을때 /찾았는데 테이블에 그 이름을 가진 사원이 없을때
+			} else { //한줄 읽어서 데이터가 없을때 또는 찾았는데 테이블에 그 이름을 가진 사원이 없을때
 				System.out.println("해당사원이 없다.");
 			}
 			
